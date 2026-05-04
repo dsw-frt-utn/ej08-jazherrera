@@ -4,20 +4,22 @@
     {
         static void Main(string[] args)
         {
-            Product producto = new Product("Laptop");
+            Problema4 problema4 = new Problema4();
 
-            // Ver descripción antes
-            Console.WriteLine("Descripción antes: " + producto.GetDescription());
+            // Caso 1: todas con valor válido
+            Console.WriteLine(problema4.CalcularPromedio(8, 6, 10));    // 8
 
-            // Llamar al método
-            Problema3 problema3 = new Problema3();
-            string resultado = problema3.CompararCopias(5, producto);
+            // Caso 2: una nota null
+            Console.WriteLine(problema4.CalcularPromedio(8, null, 10)); // 9
 
-            // Ver resultado
-            Console.WriteLine("Resultado: " + resultado);
+            // Caso 3: todas null
+            Console.WriteLine(problema4.CalcularPromedio(null, null, null)); // 0
 
-            // Ver descripción después (para confirmar que se modificó)
-            Console.WriteLine("Descripción después: " + producto.GetDescription());
+            // Caso 4: una nota fuera de rango
+            Console.WriteLine(problema4.CalcularPromedio(8, -1, 10));   // 9
+
+            // Caso 5: todas fuera de rango
+            Console.WriteLine(problema4.CalcularPromedio(-1, 11, -5));  // 0
         }
     }
 }
