@@ -4,16 +4,20 @@
     {
         static void Main(string[] args)
         {
-            Problema2 p2 = new Problema2();
+            Product producto = new Product("Laptop");
 
-            string resultado = p2.CrearResumenVenta(
-                100,
-                "Lapicera",
-                3,
-                150
-            );
+            // Ver descripción antes
+            Console.WriteLine("Descripción antes: " + producto.GetDescription());
 
-            Console.WriteLine(resultado);
+            // Llamar al método
+            Problema3 problema3 = new Problema3();
+            string resultado = problema3.CompararCopias(5, producto);
+
+            // Ver resultado
+            Console.WriteLine("Resultado: " + resultado);
+
+            // Ver descripción después (para confirmar que se modificó)
+            Console.WriteLine("Descripción después: " + producto.GetDescription());
         }
     }
 }
