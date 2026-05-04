@@ -4,10 +4,16 @@
     {
         static void Main(string[] args)
         {
-            ProductHelper helper = new ProductHelper();
-            Console.WriteLine(
-                helper.ObtenerEtiquetaProducto(10, "Cuaderno", 2500)
+            Problema2 p2 = new Problema2();
+
+            string resultado = p2.CrearResumenVenta(
+                100,
+                "Lapicera",
+                3,
+                150
             );
+
+            Console.WriteLine(resultado);
         }
     }
 }
