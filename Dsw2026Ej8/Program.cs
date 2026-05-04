@@ -4,13 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Problema5 problema5 = new Problema5();
+            Problema6 problema6 = new Problema6();
 
-            RetailSale retail = new RetailSale(1000);
-            WholesaleSale wholesale = new WholesaleSale(1000);
+            Console.WriteLine(problema6.NormalizarCodigoProducto(" ab 123 x ")); // AB-123-X
+            Console.WriteLine(problema6.NormalizarCodigoProducto("  hola mundo  ")); // HOLA-MUNDO
+            Console.WriteLine(problema6.NormalizarCodigoProducto(null));           // SIN-CODIGO
+            Console.WriteLine(problema6.NormalizarCodigoProducto("xyz"));          // XYZ
 
-            Console.WriteLine("RetailSale: " + problema5.ObtenerImporteFinal(retail));
-            Console.WriteLine("WholesaleSale: " + problema5.ObtenerImporteFinal(wholesale));
         }
     }
 }
