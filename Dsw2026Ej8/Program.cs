@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            ProductHelper helper = new ProductHelper();
+            Console.WriteLine(
+                helper.ObtenerEtiquetaProducto(10, "Cuaderno", 2500)
+            );
         }
     }
 }
